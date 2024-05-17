@@ -20,6 +20,7 @@ export const AuthForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const userData = await authorize(endpoints.auth, authData);
 
     if (isResponseOk(userData)) {
