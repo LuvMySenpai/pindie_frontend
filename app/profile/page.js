@@ -15,11 +15,11 @@ export default function Profile() {
             <div className={Styles['form__fields']}>
                 <label className={Styles['form__field']}>
                     <span className={Styles['form__field-title']}>Логин</span>
-                    <input className={Styles['form__field-input']} readOnly value={userContext.user.username}/>
+                    <input className={Styles['form__field-input']} readOnly value={userContext.user?.username} />
                 </label>
                 <label className={Styles['form__field']}>
                     <span className={Styles['form__field-title']}>Email</span>
-                    <input className={Styles['form__field-input']} readOnly value={userContext.user.email}/>
+                    <input className={Styles['form__field-input']} readOnly value={userContext.user?.email} />
                 </label>
             </div>
             <div className={Styles['form__actions']}>
