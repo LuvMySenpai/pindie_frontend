@@ -9,7 +9,6 @@ import { useGetDataByCategory } from './api/api-hooks';
 import { endpoints } from './api/config';
 
 export default function Home() {
-  console.log(`url - ${endpoints.games}`);
 
   const popularGames = useGetDataByCategory(endpoints.games, "popular");
   const newGames = useGetDataByCategory(endpoints.games, "new");
