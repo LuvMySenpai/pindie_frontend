@@ -9,6 +9,8 @@ import { useGetDataByCategory } from './api/api-hooks';
 import { endpoints } from './api/config';
 
 export default function Home() {
+  console.log(`url - ${endpoints.games}`);
+
   const popularGames = useGetDataByCategory(endpoints.games, "popular");
   const newGames = useGetDataByCategory(endpoints.games, "new");
 
@@ -19,14 +21,14 @@ export default function Home() {
         popularGames ? (
           <CardsListSection id="popular" title="Популярное" data={popularGames} type="slider" />
         ) : (
-          <Preloader/>
+          <Preloader />
         )
       }
       {
         newGames ? (
           <CardsListSection id="new" title="Новинки" data={newGames} type="slider" />
         ) : (
-          <Preloader/>
+          <Preloader />
         )
       }
       <Promo />
