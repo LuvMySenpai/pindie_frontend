@@ -94,7 +94,7 @@ export const getMe = async (url, jwt) => {
         const result = await response.json();
         return result;
     } catch (error) {
-        return error;
+        return null;
     }
 };
 
