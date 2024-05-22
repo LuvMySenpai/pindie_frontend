@@ -20,7 +20,7 @@ export const useStore = create((set) => ({
         if (jwt) {
             const user = await getMe(endpoints.me, jwt);
 
-            console.log(`jwt ${jwt}`)
+            console.log(`jwt ${jwt} & user ${user._id, user.username}`)
 
             if (user) {
                 console.log(`jwt good`)
