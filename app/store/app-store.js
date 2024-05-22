@@ -20,10 +20,16 @@ export const useStore = create((set) => ({
         if (jwt) {
             const user = await getMe(endpoints.me, jwt);
 
+            console.log(`jwt ${jwt}`)
+
             if (user) {
+                console.log(`jwt good`)
+
                 set({ isAuth: true, user: { ...user, id: user._id }, token: jwt });
                 setJWT(jwt);
             } else {
+                console.log(`jwt bad`)
+
                 set({ isAuth: false, user: null, token: null });
                 removeJWT();
             }
