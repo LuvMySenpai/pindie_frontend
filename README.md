@@ -1,1 +1,1 @@
-#pindie frontend
+Мой бэкенд: coolpindiebackend.nomoredomainswork.ru
